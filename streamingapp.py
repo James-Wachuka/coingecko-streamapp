@@ -2,6 +2,7 @@ import requests
 import psycopg2
 import pandas as pd
 import time
+from pyspark.streaming import StreamingContext
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import to_timestamp, unix_timestamp, col
 from pyspark.sql.types import StructType, StructField, StringType, DecimalType, LongType
@@ -9,6 +10,8 @@ from pyspark.sql.types import StructType, StructField, StringType, DecimalType, 
 # Create a Spark session
 spark = SparkSession.builder.appName("CoinGeckoStreamingApp").getOrCreate()
 
+# Create a StreamingContext with a batch interval of 1 second
+ssc = StreamingContext(spark.sparkContext, 60)
 # Define the schema for the streaming data
 schema = StructType([
     StructField("id", StringType(), True),
@@ -95,3 +98,8 @@ while True:
 
     # Sleep for a desired interval before fetching data again
     time.sleep(60)  # Fetch data every 60 seconds
+
+
+# Start the streaming context
+ssc.start()
+ssc.awaitTermination()
