@@ -86,7 +86,9 @@ while True:
 
     # Create a DataFrame from the fetched data
     df = spark.createDataFrame(data, schema)
-    # ---- define further transformations here
+
+    # Perform any required transformations or computations on the DataFrame
+    # For example, you can filter for specific currencies or calculate aggregate statistics
 
     # Write the DataFrame to PostgreSQL
     write_to_postgres(df)

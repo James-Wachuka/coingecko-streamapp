@@ -74,7 +74,7 @@ To run this project locally, you need to have the following installed:
 1. Start the Spark streaming app:
 
    ```
-   python streaming_app.py
+   python streamingapp.py
    ```
 
    The streaming app will continuously fetch cryptocurrency data from the CoinGecko API using Spark Streaming and store it in the PostgreSQL database.
