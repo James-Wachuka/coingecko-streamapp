@@ -101,7 +101,7 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 
 This project is licensed under the [MIT License](LICENSE).
 
-## USEFUL LINKS
+## Useful Links
 
 - [Dash Documentation](https://dash.plotly.com/)
 - [Plotly Documentation](https://plotly.com/python/)
