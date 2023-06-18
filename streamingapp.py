@@ -79,7 +79,7 @@ def write_to_postgres(df):
     cursor.close()
     conn.close()
 
-# Simulate streaming behavior by periodically fetching data
+
 while True:
     # Fetch data from the CoinGecko API
     data = fetch_coingecko_data()
