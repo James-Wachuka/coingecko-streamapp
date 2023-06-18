@@ -1,5 +1,3 @@
-Certainly! Here's an updated version of the README file that includes Spark streaming capabilities:
-
 # Cryptocurrency Streaming App and Dashboard
 
 This project consists of a streaming app and a dashboard for visualizing cryptocurrency data fetched from the CoinGecko API. The streaming app retrieves real-time cryptocurrency information using Spark Streaming and stores it in a PostgreSQL database. The dashboard provides interactive visualizations of the data, allowing user to explore and analyze cryptocurrency trends.
